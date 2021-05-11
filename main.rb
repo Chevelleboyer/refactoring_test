@@ -9,4 +9,5 @@ def draw_button(label_text, x, y, foreground_color, is_dark_mode)
 end
 
 def darken_foreground(foreground_color)
+	paint(label_text, x, y, foreground_color - 10, '#111111')
 end
