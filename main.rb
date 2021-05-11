@@ -1,13 +1,13 @@
 def draw_button(label_text, x, y, foreground_color, is_dark_mode)
-  paint = Paint.new
+  canvas = Canvas.new(label_text, x, y, foreground_color)
   if is_dark_mode
-    paint.darken_foreground
+    canvas.darken_foreground
   else
-    paint.lighten_foreground
+    canvas.lighten_foreground
   end
 end
 
-class Paint
+class Canvas
 	def initialize(label_text, x, y, foreground_color)
 		@label_text = label_text
 		@x = x
